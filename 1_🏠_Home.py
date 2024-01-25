@@ -173,6 +173,7 @@ with st.container():
 
 
 with st.container():
+	st.markdown("""")
 	st.subheader('Contact Me', anchor = 'contact')
 	col1, col2 = st.columns([1, 5])
 	with col1:
