@@ -172,21 +172,20 @@ with st.container():
 # -----------------  contact  ----------------- #
 
 
-def display_contact():
-	with st.container():
-		st.subheader('Contact Me', anchor = 'contact')
-		col1, col2 = st.columns([1, 5])
-		with col1:
-			st.write("LinkedIn")
-		with col2:
-			st.write("[Click here](https://www.linkedin.com/in/ramya-tammisetti/)")
-		with col1:
-			st.write("Email")
-		with col2:
-			st.write("ramya.tammisetti@gmail.com")
-		with col1:
-			st.write("Phone")
-		with col2:
-			st.write("(508) 579 - 1560")
+with st.container():
+	st.subheader('Contact Me', anchor = 'contact')
+	col1, col2 = st.columns([1, 5])
+	with col1:
+		st.write("LinkedIn")
+	with col2:
+		st.write("[Click here](https://www.linkedin.com/in/ramya-tammisetti/)")
+	with col1:
+		st.write("Email")
+	with col2:
+		st.write("ramya.tammisetti@gmail.com")
+	with col1:
+		st.write("Phone")
+	with col2:
+		st.write("(508) 579 - 1560")
 
 
