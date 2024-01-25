@@ -138,7 +138,7 @@ with st.container():
     st.subheader('✍️ ChatGPT', anchor='chatgpt')
     col1, col2 = st.columns([0.95, 0.05])
     with col1:
-        with st.expander('Display my latest posts'):
+        with st.expander('Watch a demo'):
             components.html(f"""<div style="display: flex; justify-content: center; align-items: center; height: 100%;">
             <video width="75%" controls autoplay muted>
             <source src="{video_data_uri}" type="video/mp4">
