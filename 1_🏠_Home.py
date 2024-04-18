@@ -22,6 +22,7 @@ st.sidebar.markdown('''
 # Sections
 - [Skills](#skills)
 - [Tableau](#tableau)
+- [PowerBI](#powerbi)
 - [Streamlit](#streamlit)
 - [ChatGPT](#chatgpt)
 - [Resume](#resume)
@@ -101,7 +102,24 @@ with st.container():
             , height=400, scrolling=True
             )
     st.markdown(""" <a href={}> <em>🔗 access to the link </a>""".format(info['Tableau']), unsafe_allow_html=True)
+
     
+# ----------------- PowerBI ----------------- #
+
+
+with st.container():
+    st.markdown("""""")
+    st.subheader("📊 PowerBI", anchor = 'powerbi')
+    col1, col2 = st.columns([0.95, 0.05])
+    with col1:
+        with st.expander('See the document and download it!'):
+            with open("images/NYC_Collisions.pdf", "rb") as f:
+                base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+                # Adjusting the iframe to fit within the column width and a more responsive height
+                pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="600px" type="application/pdf"></iframe>'
+                st.markdown(pdf_display, unsafe_allow_html=True)
+
+
 # ----------------- Streamlit ----------------- #
 with st.container():
     st.markdown("""""")
@@ -138,7 +156,7 @@ with st.container():
     st.subheader('✍️ ChatGPT', anchor='chatgpt')
     col1, col2 = st.columns([0.95, 0.05])
     with col1:
-        with st.expander('Display my latest posts'):
+        with st.expander('Watch a demo'):
             components.html(f"""<div style="display: flex; justify-content: center; align-items: center; height: 100%;">
             <video width="75%" controls autoplay muted>
             <source src="{video_data_uri}" type="video/mp4">
@@ -179,7 +197,7 @@ def display_contact():
 		with col1:
 			st.write("LinkedIn")
 		with col2:
-			st.write("[Click here](https://www.linkedin.com/in/ramya-tammisetti/)")
+			st.write("[Click here](https://www.linkedin.com/in/ramya-tammisettimohan/)")
 		with col1:
 			st.write("Email")
 		with col2:
